@@ -5,7 +5,7 @@ pipeline{
 	stages {
 		stage ('Kubernetis deploy'){
 			steps {
-					sh ("/usr/local/bin/kubectl -n testenv apply -f frontend.yaml")
+					sh ("/usr/local/bin/kubectl -n testenv apply -f ingress.yaml")
 				
 			}
 		}
