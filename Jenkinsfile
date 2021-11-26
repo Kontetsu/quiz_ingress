@@ -5,9 +5,9 @@ pipeline{
 	stages {
 		stage ('Helm deploy'){
 			steps {
-					sh ("helm repo add ingress-nginx https://kubernetes.github.io/ingress-nginx")
-					sh ("helm repo update")
-					sh ("helm install ingress-nginx ingress-nginx/ingress-nginx --create-namespace --namespace ingree-basic")
+					sh ("/usr/local/bin/helm repo add ingress-nginx https://kubernetes.github.io/ingress-nginx")
+					sh ("/usr/local/bin/helm repo update")
+					sh ("/usr/local/bin/helm install ingress-nginx ingress-nginx/ingress-nginx --create-namespace --namespace ingree-basic")
 				
 			}
 		}
